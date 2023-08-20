@@ -14,5 +14,5 @@ int handle_strings(va_list args)
 
 	write(1, s, strlen(s));
 
-	return (strlen(s));
+	return (strlen(s) - 1);
 }
