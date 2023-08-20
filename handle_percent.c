@@ -12,7 +12,6 @@ int handle_percent(va_list args)
 	char b = '%';
 
 	(void)args;
-
 	write(1, &b, 1);
 
 	return (1);
