@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	FunctionPairs pair[] = {
- 		{"s", handle_characters},
+ 		{"s", handle_strings},
  		{"c", handle_characters},
  		{"%", handle_percent},
 		{NULL, NULL},
@@ -27,18 +27,20 @@ int _printf(const char *format, ...)
 		{
 			write(1, format, 1);
 			printed_characters++;
+			
 		}
 		else
 		{
 			format++;
 			while(pair[i].specifier != NULL && *(pair[i].specifier) != *format)
 				i++;
+		
+			if (pair[i].function != NULL)
+				printed_characters += pair[i].function(args);
 		}
-		if (pair[i].function != NULL)
-			pair[i].function(args);
 		format++;
 	}
 	va_end(args);
 
-	return (0);
+	return (printed_characters);
 }
