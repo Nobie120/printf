@@ -2,7 +2,7 @@
 
 /**
  * _printf - prints anything according to the format specifier
- * @format - The format specifier
+ * @format:The format specifier
  * @...:arguements
  *
  * Return:0 on success
@@ -14,26 +14,26 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	FunctionPairs pair[] = {
- 		{"s", handle_strings},
- 		{"c", handle_characters},
- 		{"%", handle_percent},
+		{"s", handle_strings},
+		{"c", handle_characters},
+		{"%", handle_percent},
 		{NULL, NULL},
 	};
 
 	va_start(args, format);
-	while(*format)
+	while (*format)
 	{
 		if (*format != '%')
 		{
 			write(1, format, 1);
-			printed_characters++;			
+			printed_characters++;
 		}
 		else
 		{
 			format++;
-			while(pair[i].specifier != NULL && *(pair[i].specifier) != *format)
+			while (pair[i].specifier != NULL && *(pair[i].specifier) != *format)
 				i++;
-		
+
 			if (pair[i].function != NULL)
 				printed_characters += pair[i].function(args);
 		}
