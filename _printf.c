@@ -31,11 +31,13 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
+			i = 0;
 			while (pair[i].specifier != NULL && *(pair[i].specifier) != *format)
 				i++;
 
 			if (pair[i].function != NULL)
 				printed_characters += pair[i].function(args);
+			
 		}
 		format++;
 	}
