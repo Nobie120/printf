@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
+			i = 0;
 			while (pair[i].specifier != NULL && *(pair[i].specifier) != *format)
 				i++;
 
