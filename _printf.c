@@ -27,7 +27,6 @@ int _printf(const char *format, ...)
 		{
 			write(1, format, 1);
 			printed_characters++;
-			format++;
 		}
 		else
 		{
@@ -38,8 +37,8 @@ int _printf(const char *format, ...)
 
 			if (pair[i].function != NULL)
 				printed_characters += pair[i].function(args);
-			format++;
 		}
+		format++;
 	}
 	va_end(args);
 
