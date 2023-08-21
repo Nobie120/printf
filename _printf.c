@@ -36,9 +36,7 @@ int _printf(const char *format, ...)
 				i++;
 
 			if (pair[i].function != NULL)
-				printed_characters += pair[i].function(args);
-			else
-				return (-1);	
+				printed_characters += pair[i].function(args);	
 		}
 		format++;
 	}
