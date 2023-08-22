@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+<<<<<<< HEAD
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -110,3 +111,27 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */
+=======
+#include  <stddef.h>
+#include  <unistd.h>
+#include <stdarg.h>
+
+/**
+ * FunctionPairs - holds function pointers and specifiers
+ * @specifier:these are the format specifiers
+ * @function:Function to pointers
+ */
+
+typedef struct
+{
+	const char *specifier;
+	int (*function)(va_list);
+} FunctionPairs;
+
+int _printf(const char *format, ...);
+int handle_characters(va_list args);
+int handle_percent(va_list args);
+int handle_strings(va_list args);
+
+#endif
+>>>>>>> 779fb927b1c220e2a81db19856d9e47451b0335d
