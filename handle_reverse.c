@@ -10,7 +10,7 @@
 int handle_reverse(va_list args)
 {
 	int i, len = 0;
-	char *s = va_arg(args, char *);
+	const char *s = va_arg(args, const char *);
 
 	while(s[len] != '\0')
 		len++;
