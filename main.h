@@ -23,5 +23,6 @@ int handle_percent(va_list args);
 int handle_strings(va_list args);
 int handle_int(va_list args);
 int handle_rot13(va_list args);
+int handle_reverse(va_list args);
 
 #endif

@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"d", handle_int},
 		{"i", handle_int},
 		{"R", handle_rot13},
+		{"r", handle_reverse},
 		{NULL, NULL},
 	};
 
