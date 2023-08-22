@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
 		{"%", handle_percent},
 		{"d", handle_int},
 		{"i", handle_int},
+		{"R", handle_rot13},
 		{NULL, NULL},
 	};
 
