@@ -21,5 +21,6 @@ int _printf(const char *format, ...);
 int handle_characters(va_list args);
 int handle_percent(va_list args);
 int handle_strings(va_list args);
+int handle_int(va_list args);
 
 #endif
