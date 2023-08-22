@@ -132,6 +132,7 @@ int _printf(const char *format, ...);
 int handle_characters(va_list args);
 int handle_percent(va_list args);
 int handle_strings(va_list args);
+int handle_int(va_list args);
 
 #endif
 >>>>>>> 779fb927b1c220e2a81db19856d9e47451b0335d
