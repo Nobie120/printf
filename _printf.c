@@ -42,5 +42,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (printed_characters);
->>>>>>> 779fb927b1c220e2a81db19856d9e47451b0335d
 }
