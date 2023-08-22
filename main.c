@@ -6,6 +6,5 @@ int main(void)
 	_printf("%c\n", 'm');
 	_printf("jhfjf\n");
 	_printf("My %ame is %s Im %d years old\n", 'n', "ken", 19);
-	_printf("%b\n", 98);
 	return 0;
 }
